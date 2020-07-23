@@ -1,8 +1,8 @@
 #include "binary_trees.h"
 /**
  * binary_tree_uncle - finds the AUNT of a node.
- * @node: pointer to the node to find the aunt
- * Return: Pointer to the aunt node, or NULL.
+ * @node: pointer to the node to find the Aunt
+ * Return: Pointer to the Aunt node, or NULL.
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
@@ -17,6 +17,8 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 			tmp = tmp->right;
 		else if (tmp->right == node->parent)
 			tmp = tmp->left;
+		else
+			return (NULL);
 	}
 	return (tmp);
 }
