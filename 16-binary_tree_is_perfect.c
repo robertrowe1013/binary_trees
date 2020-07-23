@@ -2,7 +2,7 @@
 /**
  * binary_tree_is_perfect - checks if a binary tree is perfect.
  * @tree: pointer to the root node of the tree to check
- * Return: 1 for perfect, 0 otherwise. 
+ * Return: 1 for perfect, 0 otherwise.
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
@@ -18,7 +18,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 /**
  * binary_tree_perf_check - recursive perfect tree check
  * @tree: tree to check
- * @depth: depth of tree
+ * @bd: depth of tree
  * @level: level of current recursion
  * Return: hopefully
  */
@@ -30,12 +30,12 @@ int binary_tree_perf_check(const binary_tree_t *tree, int bd, int level)
 		return (bd == level + 1);
 	if (tree->left == NULL || tree->right == NULL)
 		return (0);
-	return binary_tree_perf_check(tree->left, bd, level+1) &&
-		binary_tree_perf_check(tree->right, bd, level+1);
+	return (binary_tree_perf_check(tree->left, bd, level + 1) &&
+		binary_tree_perf_check(tree->right, bd, level + 1));
 }
 
 /**
- * int bindepth - mesures depth of left branch
+ * bindepth - mesures depth of left branch
  * @tree: pointer
  * Return: depth!
  */
